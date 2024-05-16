@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utility.ExtendReport"/>
+  </listeners>
+  <test thread-count="5" name="Test2(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.ResultPageTest">
+        <methods>
+          <include name="doctorDetails"/>
+          <include name="patientStoriesFilter"/>
+          <include name="genderFilter"/>
+          <include name="navigatingToCorporate"/>
+          <include name="shortByFilter"/>
+          <include name="allFilters"/>
+          <include name="experienceFilter"/>
+        </methods>
+      </class> <!-- test.ResultPageTest -->
+      <class name="test.FormPageTest">
+        <methods>
+          <include name="settingup"/>
+          <include name="formtest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- test.FormPageTest -->
+      <class name="test.FindAndBookTest">
+        <methods>
+          <include name="speciality"/>
+        </methods>
+      </class> <!-- test.FindAndBookTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
